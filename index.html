@@ -3,142 +3,510 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charles Mfouapon | Legal Scholar & Financial Quant Engineer </title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Charles Mfouapon | Legal Practitioner & Quantitative Finance Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #111111;
+            --text-muted: #4a4a4a;
+            --accent-blue: #2A64B0; 
+            --bg-color: #ffffff;
+            --border-color: #eaeaea;
+        }
+
+        body {
+            font-family: 'Jost', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 100px 20px;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+            letter-spacing: 0.01em;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            margin-top: 0;
+            margin-bottom: 40px;
+            letter-spacing: 0.02em;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-top: 70px;
+            margin-bottom: 30px;
+            color: #000;
+        }
+
+        /* Entry Headers */
+        .entry {
+            margin-bottom: 50px;
+        }
+
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+
+        .role-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin: 0;
+            color: #000;
+        }
+
+        .role-dates {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .role-location {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+
+        /* Sub-roles for promotions/progressions */
+        .sub-role {
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .sub-role-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 2px;
+        }
+
+        .sub-role-dates {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Paragraphs and Lists */
+        p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        li {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .grid-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 40px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .grid-list li {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .grid-list strong {
+            color: #000;
+            font-weight: 500;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-blue);
+            padding-bottom: 1px;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        /* The signature blue line */
+        .line {
+            width: 45px;
+            height: 3px;
+            background-color: var(--accent-blue);
+            margin: 40px 0;
+        }
+
+        /* Footer styling */
+        .blue-footer {
+            background-color: var(--accent-blue);
+            color: white;
+            padding: 80px 20px;
+            margin-top: 100px;
+        }
+
+        .blue-footer .container {
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .blue-footer h3 {
+            color: white;
+            margin-top: 50px;
+        }
+
+        .blue-footer p, .blue-footer li {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+        }
+        
+        .blue-footer a {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.4);
+        }
+
+        .blue-footer .line {
+            background-color: white;
+            width: 40px;
+            height: 2px;
+        }
+
+        .contact-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .contact-list li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .contact-list svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            fill: white;
+        }
+
+        /* --- Scroll Fade-In Animation --- */
+        .fade-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            will-change: opacity, transform;
+        }
+
+        .fade-element.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
 
-    <div class="site-wrapper">
-        <header class="main-header">
-            <h1 class="site-title">Charles Mfouapon</h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#projects">PROJECTS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        
+        <header class="fade-element">
+            <h1>Charles Mfouapon</h1>
+            <h2>Legal Practitioner & Quantitative Finance Engineer</h2>
+            <div class="line"></div>
         </header>
 
-        <main>
-            <section id="about" class="about-section grid-section">
-                <div class="about-content">
-                    <h2>ABOUT</h2>
-                    <div class="about-grid">
-                        <div class="col col-bio">
-                            <h3>ME IN A NUTSHELL</h3>
-                            <p>I operate at the intersection of Law, Finance, and Technology. With concurrent Master's degrees from Oxford and WorldQuant, I blend legal analytical precision with quantitative engineering.</p>
-                        </div>
-                        <div class="col col-expertise">
-                            <h3>WHAT I DO</h3>
-                            <p>I develop institutional-grade financial tools and risk management systems. I specialize in quantitative modeling, algorithmic trading regulation, and C++/Python engineering.</p>
-                        </div>
-                        <div class="col col-tools">
-                            <h3>MY TOOLS</h3>
-                            <ul>
-                                <li>C / C++</li>
-                                <li>Python</li>
-                                <li>Unreal Engine 5</li>
-                                <li>Docker / Git / Linux</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </section>
+        <section id="about" class="fade-element">
+            <h3>About</h3>
+            <p>I am a legal practitioner and quantitative finance engineer specializing in risk management, algorithmic trading regulation, and financial infrastructure. My professional and academic background bridges rigorous software engineering with legal compliance, enabling the development of institutional-grade financial platforms that adhere strictly to global regulatory standards. I focus on deploying low-latency solutions and stochastic models using C++ and Python, continuously refining architectures for market volatility and quantitative analysis, whilst assessing venture viability and corporate compliance frameworks.</p>
+        </section>
 
-            <section id="projects" class="projects-section">
-                <h2>PROJECTS</h2>
+        <section id="experience" class="fade-element">
+            <div class="line"></div>
+            <h3>Experience</h3>
+
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">Investor</h4>
+                    <span class="role-dates">April 2026 – Present</span>
+                </div>
+                <p class="role-location">Oxford Seed Fund — Oxford, United Kingdom</p>
+                <ul>
+                    <li>Conduct rigorous due diligence and financial modeling to evaluate early-stage venture capital opportunities within the technology and finance sectors.</li>
+                    <li>Assess the legal structuring, market viability, and quantitative projections of prospective portfolio companies.</li>
+                </ul>
+            </div>
+
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">Oxford Finance Society</h4>
+                    <span class="role-dates">September 2025 – Present</span>
+                </div>
+                <p class="role-location">Oxford, United Kingdom</p>
                 
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-number">01</div>
-                        <div class="project-details">
-                            <div class="project-header">
-                                <h3>ASI PRIME</h3>
-                                <span class="dot-indicator green"></span>
-                            </div>
-                            <p>Institutional-grade risk management platform. Complex stochastic modeling and real-time financial simulation architectures.</p>
-                            <div class="project-footer">
-                                <a href="https://github.com/yourusername/asi-prime" class="read-more" target="_blank">View on GitHub</a>
-                                <div class="project-icons">
-                                    <span class="icon cpp-icon"></span>
-                                    <span class="icon ue-icon"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-number">02</div>
-                        <div class="project-details">
-                            <div class="project-header">
-                                <h3>REG-TECH ANALYTICS</h3>
-                                <span class="dot-indicator orange"></span>
-                            </div>
-                            <p>Research and tooling focused on analyzing the legal boundaries of automated market participation and algorithmic regulation.</p>
-                            <div class="project-footer">
-                                <a href="#" class="read-more">Read More</a>
-                                <div class="project-icons">
-                                    <span class="icon python-icon"></span>
-                                    <span class="icon law-icon"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-number">03</div>
-                        <div class="project-details">
-                            <div class="project-header">
-                                <h3>VOLATILITY MODELING</h3>
-                                <span class="dot-indicator grey"></span>
-                            </div>
-                            <p>Developed at WorldQuant University. Implementation of GARCH and GBDT models for financial time-series forecasting.</p>
-                            <div class="project-footer">
-                                <a href="#" class="read-more">View Project</a>
-                                <div class="project-icons">
-                                    <span class="icon python-icon"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-number">04</div>
-                        <div class="project-details">
-                            <div class="project-header">
-                                <h3>BLACKROCK RISK TOOLS</h3>
-                                <span class="dot-indicator blue"></span>
-                            </div>
-                            <p>Automation and enhancement of risk assessment frameworks for large-scale institutional portfolios.</p>
-                            <div class="project-footer">
-                                <a href="#" class="read-more">Case Study</a>
-                                <div class="project-icons">
-                                    <span class="icon cpp-icon"></span>
-                                    <span class="icon finance-icon"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                <div class="sub-role">
+                    <div class="sub-role-title">Senior Associate</div>
+                    <span class="sub-role-dates">December 2025 – Present</span>
+                    <ul>
+                        <li>Lead financial modeling workshops and quantitative analysis initiatives, mentoring junior associates in advanced financial assessment techniques.</li>
+                    </ul>
                 </div>
-            </section>
-        </main>
+                <div class="sub-role">
+                    <div class="sub-role-title">Associate</div>
+                    <span class="sub-role-dates">September 2025 – December 2025</span>
+                    <ul>
+                        <li>Facilitated institutional relationships and coordinated engagement between the student body and top-tier global investment banks.</li>
+                    </ul>
+                </div>
+            </div>
 
-        <footer id="contact" class="main-footer">
-            <h2>LET'S WORK<br>TOGETHER</h2>
-            <div class="contact-links">
-                <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LINKEDIN</a>
-                <a href="mailto:your-email@example.com">EMAIL</a>
-                <a href="https://github.com/yourusername" target="_blank">GITHUB</a>
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">Event Coordinator</h4>
+                    <span class="role-dates">January 2026 – March 2026</span>
+                </div>
+                <p class="role-location">Oxford Venture Capital Network — Oxford, United Kingdom</p>
+                <ul>
+                    <li>Structured networking events and targeted pitch sessions aimed at bridging the gap between Oxford-based technical founders and established venture capitalists.</li>
+                </ul>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Charles Mfouapon</p>
-                <span class="signature-icon">CM</span>
+
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">Portfolio & Risk Analyst</h4>
+                    <span class="role-dates">February 2024 – February 2026</span>
+                </div>
+                <p class="role-location">BlackRock</p>
+                <ul>
+                    <li>Designed and implemented quantitative risk assessment models to evaluate portfolio volatility, asset exposure, and market fluctuations across varied institutional accounts.</li>
+                    <li>Developed automated stress-testing pipelines utilizing Python and C++, which streamlined large-scale data analysis and improved the operational efficiency of risk evaluation protocols.</li>
+                </ul>
             </div>
-        </footer>
+
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">Chazai Wamba</h4>
+                    <span class="role-dates">October 2023 – February 2026</span>
+                </div>
+                <p class="role-location">Douala, Cameroon</p>
+                
+                <div class="sub-role">
+                    <div class="sub-role-title">Associate</div>
+                    <span class="sub-role-dates">March 2024 – February 2026</span>
+                    <ul>
+                        <li>Drafted and reviewed complex corporate legal documentation, ensuring strict adherence to OHADA business laws and international compliance standards.</li>
+                        <li>Executed exhaustive legal due diligence for regional mergers and acquisitions, mitigating regulatory risks for corporate entities.</li>
+                    </ul>
+                </div>
+                <div class="sub-role">
+                    <div class="sub-role-title">Legal Intern</div>
+                    <span class="sub-role-dates">October 2023 – March 2024</span>
+                    <ul>
+                        <li>Supported senior counsel in legal research, corporate structuring analysis, and the preparation of regulatory filings.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">Administrative Assistant (Internship)</h4>
+                    <span class="role-dates">June 2025 – August 2025</span>
+                </div>
+                <p class="role-location">Cemac Representation Cameroun — Yaoundé, Cameroon</p>
+                <ul>
+                    <li>Assisted in analyzing regional economic policies and administrative compliance protocols within the Central African Economic and Monetary Community framework.</li>
+                </ul>
+            </div>
+
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">Community Manager</h4>
+                    <span class="role-dates">January 2023 – December 2025</span>
+                </div>
+                <p class="role-location">Sant'Egidio Community — Yaoundé, Cameroon</p>
+                <ul>
+                    <li>Directed community outreach programs and managed volunteer schedules to ensure efficient resource distribution and the operational success of local initiatives.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education" class="fade-element">
+            <div class="line"></div>
+            <h3>Education</h3>
+
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">Master of Science, Law and Finance</h4>
+                    <span class="role-dates">September 2025 – July 2026</span>
+                </div>
+                <p class="role-location">Saïd Business School, University of Oxford — United Kingdom</p>
+                <ul>
+                    <li><strong>Honors:</strong> AfOx Mastercard Foundation Scholar (Issued Oct 2025).</li>
+                    <li><strong>Activities:</strong> Oxford Law Society, Trinity College, StEP Ignite.</li>
+                    <li>Conducting intensive academic research focusing on algorithmic trading regulation, corporate governance, and the evolving legal parameters of automated market participation.</li>
+                </ul>
+            </div>
+
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">Master of Science, Financial Engineering</h4>
+                    <span class="role-dates">October 2025 – October 2027</span>
+                </div>
+                <p class="role-location">WorldQuant University — United States</p>
+                <ul>
+                    <li>Completing advanced coursework covering stochastic calculus, portfolio optimization, and the deployment of machine learning models within financial environments.</li>
+                </ul>
+            </div>
+
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">Bachelor of Laws</h4>
+                    <span class="role-dates">October 2022 – September 2025</span>
+                </div>
+                <p class="role-location">Catholic University of Central Africa</p>
+                <ul>
+                    <li><strong>Grade:</strong> First Class Honours.</li>
+                    <li><strong>Activities:</strong> OHADA Business Society, Commonwealth.</li>
+                    <li>Established a rigorous foundational knowledge in corporate law, contractual obligations, and financial regulatory structures.</li>
+                </ul>
+            </div>
+
+            <div class="entry fade-element">
+                <div class="role-header">
+                    <h4 class="role-title">High School Diploma & GCE A Level</h4>
+                    <span class="role-dates">September 2018 – July 2022</span>
+                </div>
+                <p class="role-location">English High School Yaoundé</p>
+                <ul>
+                    <li><strong>Focus:</strong> Economics, Mathematics, Philosophy.</li>
+                    <li><strong>Grade:</strong> AAA (Best Graduating Student).</li>
+                    <li><strong>Activities:</strong> Student President, Senior Prefect.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="test-scores" class="fade-element">
+            <div class="line"></div>
+            <h3>Test Scores & Certifications</h3>
+            <ul class="grid-list">
+                <li><strong>FRM Part I</strong> <span>Pass (Quartile 1s) — Nov 2025</span></li>
+                <li><strong>Law School Admission Test (LSAT)</strong> <span>173 — Jun 2025</span></li>
+                <li><strong>GRE Quantitative</strong> <span>169/170 — Oct 2024</span></li>
+                <li><strong>IELTS Academic</strong> <span>8.5/9.0 — Jul 2025</span></li>
+                <li><strong>DALF C2 (French)</strong> <span>90/100 — Jun 2023</span></li>
+            </ul>
+        </section>
+
+        <section id="projects" class="fade-element">
+            <div class="line"></div>
+            <h3>Projects</h3>
+
+            <div class="entry fade-element">
+                <h4 class="role-title">ASI PRIME</h4>
+                <p>An institutional-grade risk management platform currently in active development. The system architecture is built utilizing C++ and Unreal Engine 5 to handle high-performance data processing, real-time financial simulations, and sophisticated quantitative modeling. Designed to bridge the technical demands of algorithmic trading with necessary regulatory oversight mechanisms.</p>
+                <p>➔ <a href="https://github.com/yourusername/asi-prime" target="_blank">github.com/yourusername/asi-prime</a></p>
+            </div>
+        </section>
+
     </div>
 
+    <footer class="blue-footer fade-element">
+        <div class="container">
+            <div class="line"></div>
+            <h3>Contact</h3>
+            <ul class="contact-list">
+                <li>
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <a href="mailto:your-email@example.com">your-email@example.com</a>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-1.85 0-2.58 1-3 1.66v-1.42h-2.76v8.32h2.76v-4.63c0-.38.07-.76.19-1.04.32-.78 1.05-1.59 2.27-1.59 1.6 0 2.24 1.22 2.24 3v4.28h2.76M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.32H5.5v8.32h2.77z"/></svg>
+                    <a href="https://linkedin.com/in/yourlinkedin" target="_blank">linkedin.com/in/yourlinkedin</a>
+                </li>
+                <li>
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.379.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                    <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+                </li>
+            </ul>
+            
+            <div class="line"></div>
+            <h3>Skills & Core Competencies</h3>
+            <ul class="grid-list">
+                <li><strong>Programming</strong> <span>C, C++, Python, Unreal Engine 5</span></li>
+                <li><strong>Finance</strong> <span>Stochastic Modeling, Risk Analysis, VC Due Diligence</span></li>
+                <li><strong>Legal</strong> <span>Securities Law, Corporate Governance, OHADA compliance</span></li>
+                <li><strong>Infrastructure</strong> <span>Docker, Git, Linux Administration</span></li>
+            </ul>
+
+            <div class="line"></div>
+            <h3>Languages</h3>
+            <ul class="grid-list">
+                <li><strong>French</strong> <span>Native (DALF C2)</span></li>
+                <li><strong>English</strong> <span>Fluent (IELTS 8.5/9.0)</span></li>
+                <li><strong>Spanish</strong> <span>Working Proficiency</span></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.12 
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-element');
+            fadeElements.forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
